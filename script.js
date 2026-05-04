@@ -2,7 +2,8 @@
 function openModal() {
   document.querySelector('.modal').style.display = 'block';
 }
-
-document.querySelector('.close-modal').addEventListener('click', function () {
-  document.querySelector('.modal').style.display = 'none';
+document.querySelector('.modal').addEventListener('click', function (e) {
+  if (e.target.classList.contains('modal')) {
+    this.style.display = 'none';
+  }
 });
